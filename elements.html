@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Cybersecurity Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">Work History</a></li>
+						<li><a href="elements.html"  class="active">Projects</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- UPDATED Wrapper -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Projects</h1>
+			
+				<!-- Tab container for projects -->
+				<div class="tab-container">
+					<div class="tab" onclick="toggleTab('portScanner')">Port Scanner Project
+						<div class="tab-description">A Python-based multi-threaded port scanner.</div>
+					</div>
+					<div class="tab" onclick="toggleTab('Project2')">Coming Soon!
+						<div class="tab-description">Coming Soon!</div>
+					</div>
+					<div class="tab" onclick="toggleTab('Project3')">Coming Soon!
+						<div class="tab-description">Coming Soon!</div>
+					</div>
+					<div class="tab" onclick="toggleTab('Project4')">Coming Soon!
+						<div class="tab-description">Coming Soon!</div>
+					</div>
+				</div>
+			
+				<!-- Tab content for each project -->
+				<div id="portScanner" class="tab-content">
+					<h2>Port Scanner - Project Overview</h2>
+					<p>This is a Python-based multi-threaded port scanner that can scan both TCP and UDP ports on target IP addresses. The project is designed to efficiently identify open or filtered ports using concurrent scanning.</p>
+					
+					<h3>Project Files</h3>
+					<ul>
+					<li><a href="README.md" download>Download README.md</a></li>
+					<li><a href="port_scanner.py" download>Download Source Code (port_scanner.py)</a></li>
+					<li><a href="port_scanner_instructions.txt" download>Download Instructions (port_scanner_instructions.txt)</a></li>
+					</ul>
+			
+					<h3>Installation</h3>
+					<p>No additional libraries are required, but you will need Python 3.2 or higher. You can check your Python version with:</p>
+					<pre><code>python --version</code></pre>
+			
+					<h3>Usage</h3>
+					<ol>
+					<li>Clone the repository to your local machine.</li>
+					<li>Run the script using Python:</li>
+					<pre><code>python port_scanner.py</code></pre>
+					<li>Input the target IP address and port range when prompted.</li>
+					</ol>
+			
+					<h3>Functionality</h3>
+					<ul>
+					<li>Scans both TCP and UDP ports on the specified target IP.</li>
+					<li>Uses multi-threading to scan multiple ports concurrently for faster results.</li>
+					<li>Outputs the status of each port (open or filtered).</li>
+					</ul>
+			
+					<h3>Future Improvements</h3>
+					<p>Potential improvements include adding ICMP error handling, service detection, and banner grabbing functionality for more in-depth scanning.</p>
+				</div>
+				
+				<div id="Project2" class="tab-content">
+					<h2>Coming Soon!</h2>
+				</div>
+				
+				<div id="Project3" class="tab-content">
+					<h2>Coming Soon!</h2>
+				</div>
+				
+				<div id="Project4" class="tab-content">
+					<h2>Coming Soon!</h2>
+				</div>
+				</div>
+			</div>
+
+		<!-- Footer 
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+		-->
+		
+		<script>
+			function toggleTab(tabId) {
+				// Get all tab content elements
+				const allTabs = document.querySelectorAll('.tab-content');
+				const allDescriptions = document.querySelectorAll('.tab-description');
+
+				// Get the currently clicked tab and its content
+				const activeTab = document.getElementById(tabId);
+				const tabElement = document.querySelector(`.tab[onclick="toggleTab('${tabId}')"]`);
+				const description = tabElement.querySelector('.tab-description');
+
+				// Check if the clicked tab is already active
+				if (activeTab.style.display === 'block') {
+					// If it is active, hide it
+					activeTab.style.display = 'none';
+				} else {
+					// Hide all tab content
+					allTabs.forEach(tab => {
+						tab.style.display = 'none';
+					});
+
+					// Show the selected tab content
+					activeTab.style.display = 'block';
+				}
+			}
+		</script>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
